@@ -1,0 +1,67 @@
+{
+  "users": [
+    {
+      "firstName": "Mohandas",
+      "lastName": "Shenoy",
+      "email": "mohan.shenoy@manipal.edu",
+      "dob": "2003-01-22T18:30:00.000Z",
+      "gender": "male",
+      "education": "Postgraduate",
+      "id": "0717"
+    },
+    {
+      "firstName": "Rajesh",
+      "lastName": "Mahadeva",
+      "email": "rajesh.mahadeva@manipal.edu",
+      "dob": "2024-12-07T18:30:00.000Z",
+      "gender": "male",
+      "education": "Doctoral",
+      "id": "da5b"
+    },
+    {
+      "id": "f031",
+      "firstName": "Kishore",
+      "lastName": "B",
+      "email": "kishore@manipal.edu",
+      "dob": "2024-11-30T18:30:00.000Z",
+      "gender": "male",
+      "education": "Doctoral"
+    },
+    {
+      "id": "e5d8",
+      "firstName": "Rani ",
+      "lastName": "Oomman Panicker",
+      "email": "rani.op@manipal.edu",
+      "dob": "2024-12-07T18:30:00.000Z",
+      "gender": "female",
+      "education": "Doctoral"
+    },
+    {
+      "id": "f4a7",
+      "firstName": "Prakash",
+      "lastName": " Kalingrao Aithal",
+      "email": "prakash.ka@manipal.edu",
+      "dob": "2024-11-30T18:30:00.000Z",
+      "gender": "male",
+      "education": "Doctoral"
+    },
+    {
+      "id": "7ebe",
+      "firstName": "Shwetha",
+      "lastName": "Rai",
+      "email": "shwetha.rai@manipal.edu",
+      "dob": "2024-11-02T18:30:00.000Z",
+      "gender": "female",
+      "education": "Doctoral"
+    },
+    {
+      "id": "dfb0",
+      "firstName": "Archana",
+      "lastName": "Praveen Kumar",
+      "email": "archana.pc@manipal.edu",
+      "dob": "2024-10-05T18:30:00.000Z",
+      "gender": "female",
+      "education": "Doctoral"
+    }
+  ]
+}
