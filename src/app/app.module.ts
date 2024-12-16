@@ -21,9 +21,13 @@ import { MatSnackBarModule } from '@angular/material/snack-bar';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatSelectModule } from '@angular/material/select';
 import { MatMenuModule } from '@angular/material/menu';
+import { AboutComponent } from './about/about.component';
+import { ContactComponent } from './contact/contact.component';
+import { HomeComponent } from './home/home.component';
+import { UserListingComponent } from './user-listing/user-listing.component';
 
 @NgModule({
-  declarations: [AppComponent, UserAddEditComponent],
+  declarations: [AppComponent, UserAddEditComponent, AboutComponent, ContactComponent, HomeComponent, UserListingComponent],
   imports: [
     BrowserModule,
     AppRoutingModule,

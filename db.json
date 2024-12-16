@@ -1,15 +1,6 @@
 {
   "users": [
     {
-      "firstName": "Mohandas",
-      "lastName": "Shenoy",
-      "email": "mohan.shenoy@manipal.edu",
-      "dob": "2003-01-22T18:30:00.000Z",
-      "gender": "male",
-      "education": "Postgraduate",
-      "id": "0717"
-    },
-    {
       "firstName": "Rajesh",
       "lastName": "Mahadeva",
       "email": "rajesh.mahadeva@manipal.edu",
@@ -28,22 +19,31 @@
       "education": "Doctoral"
     },
     {
-      "id": "e5d8",
       "firstName": "Rani ",
-      "lastName": "Oomman Panicker",
+      "lastName": "O P",
       "email": "rani.op@manipal.edu",
       "dob": "2024-12-07T18:30:00.000Z",
       "gender": "female",
-      "education": "Doctoral"
+      "education": "Undergraduate",
+      "id": "e5d8"
     },
     {
-      "id": "7ebe",
-      "firstName": "Shwetha",
-      "lastName": "Rai",
-      "email": "shwetha.rai@manipal.edu",
+      "firstName": "SHWETHA",
+      "lastName": "RAI",
+      "email": "shwetha@manipal.edu",
       "dob": "2024-11-02T18:30:00.000Z",
       "gender": "female",
-      "education": "Doctoral"
+      "education": "Doctoral",
+      "id": "7ebe"
+    },
+    {
+      "firstName": "m",
+      "lastName": "s",
+      "email": "m@m.com",
+      "dob": "2024-11-30T18:30:00.000Z",
+      "gender": "male",
+      "education": "Undergraduate",
+      "id": "f5b8"
     }
   ]
 }

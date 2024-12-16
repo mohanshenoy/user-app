@@ -1,18 +1,19 @@
 import { Component, OnInit, ViewChild } from '@angular/core';
 import { MatDialog } from '@angular/material/dialog';
-import { UserService } from './services/user.service';
 import { MatPaginator } from '@angular/material/paginator';
 import { MatSort } from '@angular/material/sort';
 import { MatTableDataSource } from '@angular/material/table';
-import { UserAddEditComponent } from './user-add-edit/user-add-edit.component';
-import { CoreService } from './services/core.service';
+import { UserService } from '../services/user.service';
+import { CoreService } from '../services/core.service';
+import { UserAddEditComponent } from '../user-add-edit/user-add-edit.component';
+
 
 @Component({
-  selector: 'app-root',
-  templateUrl: './app.component.html',
-  styleUrls: ['./app.component.scss'],
+  selector: 'app-home',
+  templateUrl: './home.component.html',
+  styleUrls: ['./home.component.scss']
 })
-export class AppComponent implements OnInit {
+export class HomeComponent implements OnInit {
   displayedColumns: string[] = [
     'id',
     'firstName',
