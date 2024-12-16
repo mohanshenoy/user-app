@@ -5,6 +5,52 @@
     Create User
   </button>
 </mat-toolbar>
+<mat-toolbar color="primary">
+  <!-- Hamburger Icon -->
+  <button mat-icon-button [matMenuTriggerFor]="burgerMenu">
+    <mat-icon>menu</mat-icon>
+  </button>
+
+  <span>My Application</span>
+</mat-toolbar>
+
+<!-- Burger Menu Definition -->
+<mat-menu #burgerMenu="matMenu" [matMenuPositionX]="'after'">
+  <button mat-menu-item [matMenuTriggerFor]="menu1">
+    <mat-icon>folder</mat-icon>
+    <span>Menu 1</span>
+  </button>
+  <button mat-menu-item [matMenuTriggerFor]="menu2">
+    <mat-icon>settings</mat-icon>
+    <span>Menu 2</span>
+  </button>
+  <button mat-menu-item>
+    <mat-icon>info</mat-icon>
+    <span>About</span>
+  </button>
+</mat-menu>
+
+<!-- Submenu Definitions -->
+<mat-menu #menu1="matMenu">
+  <button mat-menu-item>Option 1</button>
+  <button mat-menu-item>Option 2</button>
+  <button mat-menu-item [matMenuTriggerFor]="submenu1">
+    <mat-icon>subdirectory_arrow_right</mat-icon>
+    <span>Submenu</span>
+  </button>
+</mat-menu>
+
+<mat-menu #submenu1="matMenu">
+  <button mat-menu-item>Sub Option 1</button>
+  <button mat-menu-item>Sub Option 2</button>
+</mat-menu>
+
+<mat-menu #menu2="matMenu">
+  <button mat-menu-item>Settings 1</button>
+  <button mat-menu-item>Settings 2</button>
+</mat-menu>
+
+
 <div class="main-body">
   <mat-form-field>
     <mat-label>Search</mat-label>

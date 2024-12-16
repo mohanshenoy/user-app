@@ -1,5 +1,5 @@
 import { Component, Inject, OnInit } from '@angular/core';
-import { FormBuilder, FormGroup } from '@angular/forms';
+import { FormBuilder, FormGroup, Validators ,AbstractControl  } from '@angular/forms';
 import { MatDialogRef, MAT_DIALOG_DATA } from '@angular/material/dialog';
 import { CoreService } from '../core/core.service';
 import { UserService } from '../services/user.service';
@@ -25,14 +25,55 @@ export class UserAddEditComponent implements OnInit {
     private _coreService: CoreService
   ) {
     this.empForm = this._fb.group({
-      firstName: '',
-      lastName: '',
-      email: '',
-      dob: '',
+      firstName: [
+        '',
+        [
+          Validators.required, 
+          Validators.minLength(1), 
+          Validators.maxLength(25)
+        ]
+      ],  
+      lastName: [
+        '',
+        [
+          Validators.required, 
+          Validators.minLength(1), 
+          Validators.maxLength(25)
+        ]
+      ], 
+      email: [
+        '', 
+        [
+          Validators.required, 
+          Validators.email
+        ]
+      ],
+      dob:  [
+        '', 
+        [
+          Validators.required,
+          this.validateDOB // Custom validator to check future dates
+        ]
+      ],
       gender: '',
       education: ''
     });
   }
+  
+    // Custom Validator for DOB (No Future Dates)
+    validateDOB(control: AbstractControl): { [key: string]: boolean } | null {
+      const selectedDate = new Date(control.value);
+      const today = new Date();
+        if (selectedDate > today) {
+        return { futureDate: true }; // Validation error if the date is in the future
+      }
+      return null; // No validation error
+    }
+
+  get formControls() {
+    return this.empForm.controls;
+  }
+
   ngOnInit(): void {
     this.empForm.patchValue(this.data);
   }

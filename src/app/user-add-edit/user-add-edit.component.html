@@ -1,5 +1,5 @@
 <div mat-dialog-title>
-    <h1>User Form</h1>
+    <h1>{{data ? 'Update User form': 'Create User form'}}</h1>
 </div>
 <form [formGroup]="empForm" (ngSubmit)="onFormSubmit()">
     <div mat-dialog-content class="content">
@@ -7,16 +7,46 @@
             <mat-form-field appearance="outline">
                 <mat-label>First name</mat-label>
                 <input matInput type="text" placeholder="Enter your first name" formControlName="firstName">
+                <mat-error *ngIf="formControls['firstName'].touched && formControls['firstName'].invalid">
+                    <ng-container *ngIf="formControls['firstName'].errors?.['required']">
+                      First Name is required.
+                    </ng-container>
+                    <ng-container *ngIf="formControls['firstName'].errors?.['minlength']">
+                      Must be at least {{ formControls['firstName'].errors?.['minlength'].requiredLength }} characters long.
+                    </ng-container>
+                    <ng-container *ngIf="formControls['firstName'].errors?.['maxlength']">
+                      Cannot exceed {{ formControls['firstName'].errors?.['maxlength'].requiredLength }} characters.
+                    </ng-container>
+                </mat-error>
             </mat-form-field>
             <mat-form-field appearance="outline">
                 <mat-label>Last Name</mat-label>
                 <input matInput type="text" placeholder="Enter your last name" formControlName="lastName">
+                <mat-error *ngIf="formControls['lastName'].touched && formControls['lastName'].invalid">
+                    <ng-container *ngIf="formControls['lastName'].errors?.['required']">
+                      Last Name is required.
+                    </ng-container>
+                    <ng-container *ngIf="formControls['lastName'].errors?.['minlength']">
+                      Must be at least {{ formControls['lastName'].errors?.['minlength'].requiredLength }} characters long.
+                    </ng-container>
+                    <ng-container *ngIf="formControls['lastName'].errors?.['maxlength']">
+                      Cannot exceed {{ formControls['lastName'].errors?.['maxlength'].requiredLength }} characters.
+                    </ng-container>
+                </mat-error>            
             </mat-form-field>
         </div>
         <div class="row">
             <mat-form-field appearance="outline">
                 <mat-label>Email</mat-label>
                 <input matInput type="email" placeholder="Ex. test@gmail.com" formControlName="email">
+                <mat-error *ngIf="formControls['email'].touched && formControls['email'].invalid">
+                    <ng-container *ngIf="formControls['email'].errors?.['required']">
+                      Email is required.
+                    </ng-container>
+                    <ng-container *ngIf="formControls['email'].errors?.['email']">
+                      Enter valid email address.
+                    </ng-container>
+                  </mat-error>
             </mat-form-field>
             <mat-form-field appearance="outline">
                 <mat-label>Date of birth</mat-label>
@@ -24,6 +54,12 @@
                 <mat-hint>MM/DD/YYYY</mat-hint>
                 <mat-datepicker-toggle matIconSuffix [for]="picker"></mat-datepicker-toggle>
                 <mat-datepicker #picker></mat-datepicker>
+                <mat-error *ngIf="formControls['dob'].touched && formControls['dob'].invalid">
+                    <ng-container *ngIf="formControls['dob'].errors?.['required']">Date of Birth is required.</ng-container>
+                    <ng-container *ngIf="formControls['dob'].errors?.['futureDate']">
+                    Cannot be future date.
+                    </ng-container>
+                  </mat-error>
             </mat-form-field>
         </div>
         <div class="row">
@@ -46,6 +82,6 @@
     </div>
     <div mat-dialog-actions class="action">
         <button mat-raised-button type="button" [mat-dialog-close]="false">Cancel</button>
-        <button mat-raised-button color="primary" type="submit">{{data ? 'Update': 'Add'}}</button>
+        <button mat-raised-button color="primary" type="submit"  [disabled]="empForm.invalid" >{{data ? 'Update': 'Add'}}</button>
     </div>
 </form>

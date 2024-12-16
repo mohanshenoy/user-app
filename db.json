@@ -37,29 +37,11 @@
       "education": "Doctoral"
     },
     {
-      "id": "f4a7",
-      "firstName": "Prakash",
-      "lastName": " Kalingrao Aithal",
-      "email": "prakash.ka@manipal.edu",
-      "dob": "2024-11-30T18:30:00.000Z",
-      "gender": "male",
-      "education": "Doctoral"
-    },
-    {
       "id": "7ebe",
       "firstName": "Shwetha",
       "lastName": "Rai",
       "email": "shwetha.rai@manipal.edu",
       "dob": "2024-11-02T18:30:00.000Z",
-      "gender": "female",
-      "education": "Doctoral"
-    },
-    {
-      "id": "dfb0",
-      "firstName": "Archana",
-      "lastName": "Praveen Kumar",
-      "email": "archana.pc@manipal.edu",
-      "dob": "2024-10-05T18:30:00.000Z",
       "gender": "female",
       "education": "Doctoral"
     }
